@@ -1,0 +1,54 @@
+/* Blog specific styles */
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.rectangle {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* Default background color */
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.rectangle:hover {
+    background-color: #f9f9f9;
+}
+
+/* Apply dark mode styles */
+.dark-mode .rectangle {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Blog specific styles */
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 80px; /* Adjust as needed */
+    font-size: 16px;
+    color: #333; /* Adjust color as needed */
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-right: 10px; /* Space between back button and toggle button */
+}
+
+.back-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}

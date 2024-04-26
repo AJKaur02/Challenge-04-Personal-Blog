@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="./Assets/css/script.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="circle">
+                <h2>My First Blog</h2>
+            </div>
+        </div>
+        <div class="right-side">
+            <h2 class="right-side-title">What's on your mind?</h2>
+            <form id="blogForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="title">Blog Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">Blog Content:</label>
+                <textarea id="content" name="content" required></textarea>
+                <button type="submit" onclick="redirectToBlog()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <button id="toggleMode" class="theme-toggle">🌞</button>
+    <script src="./Assets/js/blog.js"></script>
+    <script>
+        function redirectToBlog() {
+            window.location.href = 'blog.html';
+        }
+    </script>
+</body>
+</html>
