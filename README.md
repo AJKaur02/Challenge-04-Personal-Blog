@@ -12,6 +12,7 @@ This is a simple web application for creating and viewing blog posts. It allows 
 
 ## File Structure
 
+```md
 my-blog
 ├── assets
 │   ├── css
@@ -25,6 +26,7 @@ my-blog
 ├── index.html
 ├── blog.html
 └── README.md
+```
 
 - `Assets`: Contains CSS and JavaScript files.
 - `index.html`: Landing page with a form to submit new blog posts.
