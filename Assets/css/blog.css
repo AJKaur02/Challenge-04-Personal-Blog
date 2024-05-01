@@ -1,54 +1,73 @@
-/* Blog specific styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-.dark-mode {
-    background-color: #000;
-    color: #fff;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px; 
+}
+
+.back-button {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.theme-toggle {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .rectangle {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff; /* Default background color */
+    height: 200px;
+    background-color: #fff;
     border: 1px solid #ddd;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .rectangle:hover {
     background-color: #f9f9f9;
 }
 
-/* Apply dark mode styles */
-.dark-mode .rectangle {
-    background-color: #333;
-    color: #fff;
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: left;
 }
 
-/* Blog specific styles */
-.back-button {
-    position: absolute;
-    top: 10px;
-    right: 80px; /* Adjust as needed */
-    font-size: 16px;
-    color: #333; /* Adjust color as needed */
+footer a {
     text-decoration: none;
-    padding: 5px 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin-right: 10px; /* Space between back button and toggle button */
+    color: #007bff;
 }
 
-.back-button:hover {
-    background-color: #333;
-    color: #fff;
+footer a:hover {
+    text-decoration: underline;
 }
 
-.theme-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 16px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}

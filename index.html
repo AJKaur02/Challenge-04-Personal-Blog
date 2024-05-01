@@ -15,14 +15,14 @@
         </div>
         <div class="right-side">
             <h2 class="right-side-title">What's on your mind?</h2>
-            <form id="blogForm">
+            <form id="blogForm" onsubmit="return redirectToBlog()">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="title">Blog Title:</label>
                 <input type="text" id="title" name="title" required>
                 <label for="content">Blog Content:</label>
                 <textarea id="content" name="content" required></textarea>
-                <button type="submit" onclick="redirectToBlog()">Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
     </div>
@@ -30,7 +30,18 @@
     <script src="./Assets/js/blog.js"></script>
     <script>
         function redirectToBlog() {
+            var username = document.getElementById("username").value;
+            var title = document.getElementById("title").value;
+            var content = document.getElementById("content").value;
+
+            if (username.trim() === "" || title.trim() === "" || content.trim() === "") {
+                alert("Please fill in all fields.");
+                return false; // Prevent form submission
+            }
+
+            // If all fields are filled, proceed to redirect
             window.location.href = 'blog.html';
+            return false;
         }
     </script>
 </body>

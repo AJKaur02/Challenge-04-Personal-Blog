@@ -4,6 +4,18 @@ body {
     background-color: #f0f0f0;
     color: #333;
     transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; /* Ensures full viewport height */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box;
 }
 
 .container-circle {
@@ -27,12 +39,29 @@ body {
     width: 60%;
 }
 
+.left-side {
+    width: 30%; /* Adjust as needed */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box;
+}
+
+.right-side {
+    width: 60%; /* Adjust as needed */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .right-side-title {
     margin-top: 0;
 }
 
 form {
     margin-bottom: 20px;
+    width: 100%; /* Make form full width */
+    max-width: 400px; /* Limit form width */
 }
 
 label,
@@ -40,6 +69,7 @@ input,
 textarea {
     display: block;
     margin-bottom: 10px;
+    width: 100%; /* Make input fields full width */
 }
 
 button {
@@ -79,23 +109,6 @@ header {
     margin-bottom: 20px;
 }
 
-.left-top {
-    margin-top: 0;
-}
-
-footer {
-    margin-top: 20px;
-}
-
-footer a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
 .theme-toggle {
     position: absolute;
     top: 20px;
@@ -110,4 +123,25 @@ footer a:hover {
 .dark-mode {
     background-color: #333;
     color: #fff;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Change direction to stack items vertically */
+        height: auto; /* Auto height */
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%; /* Take up full width */
+    }
+
+    .right-side {
+        order: 2; /* Move to the bottom */
+    }
+
+    .left-side {
+        order: 1; /* Move to the top */
+    }
 }
